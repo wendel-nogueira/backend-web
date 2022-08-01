@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc",
+    "runbuild": "npm run build && npm start",
     "startdev": "ts-node src/server.ts",
     "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
