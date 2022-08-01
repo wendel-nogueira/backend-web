@@ -3,6 +3,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 import { router } from './routes';
 import cors from 'cors';
+import 'dotenv/config';
 
 
 const app = express();
@@ -25,6 +26,8 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     }
 });
 
-app.listen(3000, () => {
-    console.log('Server started on port 3000')
+const port = process.env.PORT;
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
